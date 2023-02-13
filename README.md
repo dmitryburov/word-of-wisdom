@@ -1,7 +1,5 @@
 # "Word of Wisdom" tcp server (protected from DDOS attacks with the Proof of Work).
 
-![IMG](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Proof_of_Work_challenge_response.svg/550px-Proof_of_Work_challenge_response.svg.png)
-
 ## Task
 
 Design and implement "Word of Wisdom" tcp server:
@@ -19,6 +17,7 @@ Requirements:
 
 - Go 1.19+ installed (to run tests, start server or client without Docker)
 - Docker installed (to run docker-compose)
+- Environment file `.env` (see example in [env.example](env.example))
 
 ```
 # Run server and client by docker-compose
@@ -38,6 +37,6 @@ make help
 
 - [Word of Wisdom](https://en.wikipedia.org/wiki/Word_of_Wisdom)
 - [Proof of work](https://en.wikipedia.org/wiki/Proof_of_work)
-- [Hashcash](https://ru.wikipedia.org/wiki/Hashcash)
+- [Hashcash](https://en.wikipedia.org/wiki/Hashcash)
 - [Distributed Consensus – Proof-of-Work](https://oliverjumpertz.com/distributed-consensus-proof-of-work/)
 - [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
