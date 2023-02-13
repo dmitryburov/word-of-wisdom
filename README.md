@@ -1,0 +1,1 @@
+# "Word of Wisdom" tcp server (protected from DDOS attacks with the PoW).
