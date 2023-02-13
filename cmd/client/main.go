@@ -7,6 +7,7 @@ import (
 	"syscall"
 
 	"github.com/dmitryburov/word-of-wisdom/config"
+	"github.com/dmitryburov/word-of-wisdom/internal/app"
 	"github.com/dmitryburov/word-of-wisdom/utils"
 )
 
