@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: .deploy/Dockerfile.server
+    image: dmitryburov/wow/server:latest
+    container_name: server-wow
+    restart: always
+
+  client:
+    build:
+      context: .
+      dockerfile: .deploy/Dockerfile.client
+    image: dmitryburov/wow/client:latest
+    container_name: client-wow
+    environment:
+      - SERVER_ADDR=server:8000
+    depends_on:
+      - server
+    links:
+      - server
