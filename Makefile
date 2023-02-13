@@ -16,6 +16,10 @@ run-server: ## Run only server
 run-client: ## Run only client
 	go run cmd/client/main.go
 
+test: ## Run tests
+	go clean --testcache
+	go test ./...
+
 deps: ## Download dependencies
 	go mod download && go mod tidy
 
