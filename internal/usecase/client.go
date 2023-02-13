@@ -39,7 +39,7 @@ func (c *client) Start(ctx context.Context, count int) error {
 
 		q, err := c.GetQuote(ctx)
 		if err != nil {
-			c.logger.Error("failed to get quote", err.Error())
+			c.logger.Error("failed to get quote: ", err.Error())
 		} else {
 			c.logger.Info(string(q))
 		}

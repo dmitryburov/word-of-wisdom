@@ -8,7 +8,7 @@ import (
 
 // ServerConfig server configuration
 type ServerConfig struct {
-	Addr      string        `env:"SERVER_ADDR,default=:8000"`
+	Addr      string        `env:"SERVER_ADDR,default=0.0.0.0:8000"`
 	KeepAlive time.Duration `env:"SERVER_KEEP_ALIVE,default=15s"`
 	Deadline  time.Duration `env:"SERVER_DEADLINE,default=10s"`
 	DefaultConfig
@@ -16,7 +16,7 @@ type ServerConfig struct {
 
 // ClientConfig client configuration
 type ClientConfig struct {
-	ServerAddr   string        `env:"SERVER_ADDR,default=:8000"`
+	ServerAddr   string        `env:"SERVER_ADDR,default=127.0.0.0:8000"`
 	RequestCount int           `env:"CLIENT_REQUEST_COUNT,default=100"`
 	KeepAlive    time.Duration `env:"CLIENT_KEEP_ALIVE,default=15s"`
 	DefaultConfig
